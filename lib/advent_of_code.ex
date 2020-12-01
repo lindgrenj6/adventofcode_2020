@@ -1,18 +1,10 @@
 defmodule AdventOfCode do
-  @moduledoc """
-  Documentation for `AdventOfCode`.
-  """
+  def read_file(file) do
+    File.read!("./input/#{file}")
+    |> String.split
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> AdventOfCode.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def list_of_string_to_ints(list) do
+    Enum.map(list, &String.to_integer/1)
   end
 end

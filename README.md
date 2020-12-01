@@ -1,21 +1,13 @@
 # AdventOfCode
 
-**TODO: Add description**
+### My solutions for advent of code 2020, in Elixir!
 
-## Installation
+I'm basically putting input files in `input/`, and then throwing together a test as well in `test/`.
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `advent_of_code` to your list of dependencies in `mix.exs`:
+Common methods are in `lib/advent_of_code.ex` for things like reading a specified file, converting a list of strings -> ints etc. 
 
-```elixir
-def deps do
-  [
-    {:advent_of_code, "~> 0.1.0"}
-  ]
-end
-```
+The solutions are in `lib/advent_of_code/` named for each day. I will update the unit tests pointing towards new input every time I solve a solution etc.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/advent_of_code](https://hexdocs.pm/advent_of_code).
+---
 
+To validate, just run `mix test`.
