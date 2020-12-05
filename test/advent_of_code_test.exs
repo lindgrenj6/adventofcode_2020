@@ -36,4 +36,13 @@ defmodule AdventOfCodeTest do
     assert p1 == 239
     assert p2 == 188
   end
+
+  test "dec05" do
+    test_string = AdventOfCode.read_file("dec5.txt")
+    p1 = AdventOfCode.Dec05.first(test_string)
+    p2 = AdventOfCode.Dec05.second(test_string)
+
+    assert p1 == 850
+    assert p2 == 599
+  end
 end
