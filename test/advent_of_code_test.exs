@@ -1,31 +1,35 @@
 defmodule AdventOfCodeTest do
   use ExUnit.Case
 
-  test "dec01" do
-    test_string = AdventOfCode.read_file("dec1.txt")
-    p1 = AdventOfCode.Dec01.first(test_string)
-    p2 = AdventOfCode.Dec01.second(test_string)
+  # I got sick of re-writing the same block over and over again.
+  # why not let a macro write tests for me.
+  defmacro aocautotest(file, tests) do
+    quote do
+      Enum.each(unquote(tests), fn {f, a} ->
+        assert f.(AdventOfCode.read_file(unquote(file))) == a
+      end)
+    end
+  end
 
-    assert p1 == 888_331
-    assert p2 == 130_933_530
+  test "dec01" do
+    aocautotest(
+      "dec1.txt",
+      [{&AdventOfCode.Dec01.first/1, 888_331}, {&AdventOfCode.Dec01.second/1, 130_933_530}]
+    )
   end
 
   test "dec02" do
-    test_string = AdventOfCode.read_file("dec2.txt")
-    p1 = AdventOfCode.Dec02.first(test_string)
-    p2 = AdventOfCode.Dec02.second(test_string)
-
-    assert p1 == 378
-    assert p2 == 280
+    aocautotest(
+      "dec2.txt",
+      [{&AdventOfCode.Dec02.first/1, 378}, {&AdventOfCode.Dec02.second/1, 280}]
+    )
   end
 
   test "dec03" do
-    test_string = AdventOfCode.read_file("dec3.txt")
-    p1 = AdventOfCode.Dec03.first(test_string)
-    p2 = AdventOfCode.Dec03.second(test_string)
-
-    assert p1 == 187
-    assert p2 == 4_723_283_400
+    aocautotest(
+      "dec3.txt",
+      [{&AdventOfCode.Dec03.first/1, 187}, {&AdventOfCode.Dec03.second/1, 4_723_283_400}]
+    )
   end
 
   test "dec04" do
@@ -38,12 +42,10 @@ defmodule AdventOfCodeTest do
   end
 
   test "dec05" do
-    test_string = AdventOfCode.read_file("dec5.txt")
-    p1 = AdventOfCode.Dec05.first(test_string)
-    p2 = AdventOfCode.Dec05.second(test_string)
-
-    assert p1 == 850
-    assert p2 == 599
+    aocautotest(
+      "dec5.txt",
+      [{&AdventOfCode.Dec05.first/1, 850}, {&AdventOfCode.Dec05.second/1, 599}]
+    )
   end
 
   test "dec06" do
