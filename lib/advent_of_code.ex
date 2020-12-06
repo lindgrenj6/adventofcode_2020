@@ -11,4 +11,6 @@ defmodule AdventOfCode do
   def list_of_string_to_ints(list) do
     Enum.map(list, &String.to_integer/1)
   end
+
+  def map_to_codepoints(line), do: Enum.map(line, &String.codepoints/1)
 end
