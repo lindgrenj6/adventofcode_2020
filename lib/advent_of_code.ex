@@ -1,4 +1,6 @@
 defmodule AdventOfCode do
+  def testfile(), do: read_file("tinput.txt")
+
   def read_file(file) do
     File.read!("./input/#{file}") |> String.split("\n") |> Enum.reject(&(&1 == ""))
   end
