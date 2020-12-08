@@ -15,4 +15,12 @@ defmodule AdventOfCode do
   end
 
   def map_to_codepoints(line), do: Enum.map(line, &String.codepoints/1)
+
+  # Shamelessly stolen: https://stackoverflow.com/a/29674651
+  def benchmark(function) do
+    function
+    |> :timer.tc
+    |> elem(0)
+    |> Kernel./(1_000_000)
+  end
 end
