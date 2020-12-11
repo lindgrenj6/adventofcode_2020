@@ -27,3 +27,4 @@ advent_of_code-*.tar
 /tmp
 
 /input/tinput.txt
+/adventofcode.iml
