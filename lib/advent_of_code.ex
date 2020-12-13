@@ -29,4 +29,13 @@ defmodule AdventOfCode do
     |> Enum.map(&(Task.async(fn -> func.(&1) end)))
     |> Enum.map(&Task.await/1)
   end
+
+  def safe_convert_to_int(i) do
+    try do
+      String.to_integer(i)
+    rescue
+      # was not int, traumatized.
+      ArgumentError -> i
+    end
+  end
 end
