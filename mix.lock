@@ -1,0 +1,3 @@
+%{
+  "combinatorics": {:hex, :combinatorics, "0.1.0", "88c870a34196ff32243180c6abdc947c57877b35915d5f0a444f3f052aa27134", [:mix], [], "hexpm", "81f54a189887ce536decad76fde62f87abdcd4b64bcd0cec7b72a5995f2d36fa"},
+}
