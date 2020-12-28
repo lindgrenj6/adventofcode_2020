@@ -21,7 +21,8 @@ defmodule AdventOfCode.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:combinatorics, "~> 0.1.0"}
+      {:combinatorics, "~> 0.1.0"},
+      {:chunky, "~> 0.13.0"}
     ]
   end
 end

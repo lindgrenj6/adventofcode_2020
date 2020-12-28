@@ -1,3 +1,4 @@
 %{
+  "chunky": {:hex, :chunky, "0.13.0", "754d8183b0820a552e4d34f1af962b0f1a616d5ce6050bffce7beca19f4c7eb6", [:mix], [], "hexpm", "89344688aeacf672c8ffaf3df3951821152bd2adadaa2e7ee81410c4c67f1c59"},
   "combinatorics": {:hex, :combinatorics, "0.1.0", "88c870a34196ff32243180c6abdc947c57877b35915d5f0a444f3f052aa27134", [:mix], [], "hexpm", "81f54a189887ce536decad76fde62f87abdcd4b64bcd0cec7b72a5995f2d36fa"},
 }
